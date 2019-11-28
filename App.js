@@ -1,11 +1,11 @@
 import React from 'react';
-import {Turtle} from './Turtle/MainTurtle' 
+import {NavTurtle} from './Turtle/NavTurtle'
 
 class App extends Component {
 
   render() {
     return (
-      <Turtle/>
+      <NavTurtle/>
     );
   }
 }

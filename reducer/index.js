@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import TurtleTD from './TurtleTD'
-import Visibility from './Visibility'
+import TurtleTD from './reducers'
+import TurtleVisibilityFilter from './Visibility'
 
-export default combineReducers({
+const TurtleDB = combineReducers({
   TurtleTD,
-  Visibility
+  TurtleVisibilityFilter
 })
+
+export default TurtleDB
