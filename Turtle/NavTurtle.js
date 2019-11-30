@@ -44,7 +44,7 @@ export default class TodoList extends Component {
 
     return (
       <View style={stylesForTodo.container2}>
-        <Text>TodoList Screen</Text>
+        <Text>Todo List Screen</Text>
         <Text>
           itemId: {JSON.stringify(this.props.navigation.getParam('itemId', 'NO-ID'))}
         </Text>

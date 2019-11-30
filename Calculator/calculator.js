@@ -3,7 +3,11 @@ import { View, Text, TouchableOpacity, Easing, Animated, } from 'react-native';
 import { styles } from './style';
 
 export default class CalculatorClass extends Component {
-
+    static navigationOptions = {
+        title: 'Calculator',
+        headerStyle: { backgroundColor: 'gray' },
+        headerTitleStyle: { color: 'black' },
+    };
     constructor() {
         super()
         this.state = {
@@ -67,8 +71,8 @@ export default class CalculatorClass extends Component {
 
     render() {
         const changeColor = this.animatedValue.interpolate({
-            inputRange: [0, 500,1000],
-            outputRange: ['red','green', 'black']
+            inputRange: [0, 500, 1000],
+            outputRange: ['red', 'green', 'black']
         })
         let ops = []
         for (let i = 0; i < 5; i++) {
@@ -95,7 +99,7 @@ export default class CalculatorClass extends Component {
                     <Text style={styles.numberText}>{this.state.text}</Text>
                 </View>
                 <View style={styles.result}>
-                    <Animated.Text style={{ color: changeColor, fontSize: 40 }}>{this.state.resText}</Animated.Text> 
+                    <Animated.Text style={{ color: changeColor, fontSize: 40 }}>{this.state.resText}</Animated.Text>
                 </View>
                 <View style={styles.buttons}>
                     <View style={styles.numbers}>
