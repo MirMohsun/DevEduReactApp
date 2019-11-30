@@ -1,13 +1,11 @@
-import React from 'react';
-import {Turtle} from './Turtle/MainTurtle' 
+import React, { Component } from 'react';
+import {SomeContainer} from './Turtle/NavTurtle'
 
-class App extends Component {
 
+export default class App extends Component {
   render() {
     return (
-      <Turtle/>
-    );
+      <SomeContainer />
+    )
   }
 }
-
-export default App
