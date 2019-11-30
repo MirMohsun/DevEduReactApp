@@ -4,6 +4,8 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import { stylesForTodo, stylesForNav } from './StyleTurtle'
 import CalculatorClass from '../Calculator/calculator'
+import TodoList from '../ToDoList/todolist'
+import List from '../FilList/List';
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -20,45 +22,12 @@ class HomeScreen extends Component {
         })}>
           <Text style={[stylesForNav.btntxt]}>Go To Todo List</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist', {
-          itemId: 86,
-          otherParam: 'anything you want here',
-        })}>
-          <Text style={[stylesForNav.btntxt]}>Go To some screen</Text>
-        </TouchableOpacity>
         <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('Calculator')}>
           <Text style={[stylesForNav.btntxt]}>Go To Calculator</Text>
         </TouchableOpacity>
-      </View>
-    );
-  }
-}
-
-export default class TodoList extends Component {
-  static navigationOptions = {
-    headerRight: () => <Text>Bye</Text>,
-    headerTitle: () => (<Button onPress={() => alert('This is a button!')}
-      title="Info" color="black" />),
-  };
-  render() {
-
-    return (
-      <View style={stylesForTodo.container2}>
-        <Text>Todo List Screen</Text>
-        <Text>
-          itemId: {JSON.stringify(this.props.navigation.getParam('itemId', 'NO-ID'))}
-        </Text>
-        <Text>
-          otherParam:{JSON.stringify(this.props.navigation.getParam('otherParam', 'value'))}
-        </Text>
-        <Button
-          title="Go to TodoList... again"
-          onPress={() =>
-            this.props.navigation.push('ToDolist', {
-              itemId: Math.floor(Math.random() * 100),
-            })
-          }
-        />
+        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('FilmList')}>
+          <Text style={[stylesForNav.btntxt]}>Sorry That part of project does not work correctly...</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -68,6 +37,7 @@ const Turtle = createStackNavigator(
     Home: HomeScreen,
     ToDolist: TodoList,
     Calculator: CalculatorClass,
+    FilmList: List
   },
   {
     initialRouteName: 'Home',

@@ -1,21 +1,17 @@
-const TurtleTD = (state = [], action) => {
-    switch (action.type) {
-      case 'Add':
-        return [
-          ...state,
-          {
-            id: action.id,
-            text: action.text,
-            completed: false
-          }
-        ]
-      case 'Toggle':
-        return state.map(todo =>
-          todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
-        )
-      default:
-        return state
-    }
+
+
+export const initialState = {
+  counter: 0
+}
+export function TurtleTD (state = initialState, action) {
+  switch (action.type) {
+      case 'INCREASE_COUNTER':
+          return { counter: action.payload }
+      case 'DECREASE_COUNTER':
+          return { counter: action.payload }
+      case 'RESET':
+          return { counter: action.payload }
   }
-  
-  export default TurtleTD
+  return state
+}
+export default TurtleTD
