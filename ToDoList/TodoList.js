@@ -3,10 +3,9 @@ import React, { Component } from 'react'
 
 export default class TodoList extends Component {
   static navigationOptions = {
-
-    headerRight: () => <Text>Bye</Text>,
-    headerTitle: () => (<Button onPress={() => alert('This is a button!')}
-      title="Info" color="black" />),
+    title: 'Your ToDoList',
+    headerStyle: { backgroundColor: 'gray' },
+    headerTitleStyle: { color: 'black' },
   };
 
   render() {
