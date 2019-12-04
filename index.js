@@ -8,7 +8,7 @@ import React from 'react'
 import { logger } from 'redux-logger'
 
 
-const turtleStrore = createStore(TurtleDB,applyMiddleware(logger))
+const turtleStrore = createStore(TurtleDB)
 const Turtle = () =>
     <Provider store={turtleStrore}><App /></Provider>;
 AppRegistry.registerComponent(appName, () => Turtle);

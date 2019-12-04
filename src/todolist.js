@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { increaseaction, decreaseaction, resetaction } from './actions/actions'
+import { increaseaction, decreaseaction, resetaction } from '../ToDoList/actions/actions'
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { connect } from 'react-redux'
-import {createLogger} from 'redux-logger';
 
-export class TodoList extends Component {
+export class toaod extends Component {
     render() {
         
         return (

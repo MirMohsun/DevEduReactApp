@@ -4,8 +4,8 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import { stylesForTodo, stylesForNav } from './StyleTurtle'
 import CalculatorClass from '../Calculator/calculator'
-import TodoList from '../ToDoList/todolist'
 import List from '../FilList/List';
+import { TodoApp } from '../ToDoList/todoApp';
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -35,7 +35,7 @@ class HomeScreen extends Component {
 const Turtle = createStackNavigator(
   {
     Home: HomeScreen,
-    ToDolist: TodoList,
+    ToDolist: TodoApp,
     Calculator: CalculatorClass,
     FilmList: List
   },
