@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Button } from 'react-native';
 import React, { Component } from 'react'
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
@@ -15,17 +15,8 @@ class HomeScreen extends Component {
   render() {
     return (
       <View style={stylesForNav.container}>
-        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist', {
-          itemId: 86,
-          otherParam: 'anything you want here',
-        })}>
-          <Text style={[stylesForNav.btntxt]}>Go To Todo List</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist', {
-          itemId: 86,
-          otherParam: 'anything you want here',
-        })}>
-          <Text style={[stylesForNav.btntxt]}>Go To some screen</Text>
+        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist')}>
+          <Text style={[stylesForNav.btntxt]}>Go To ToDoList</Text>
         </TouchableOpacity>
         <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('Calculator')}>
           <Text style={[stylesForNav.btntxt]}>Go To Calculator</Text>

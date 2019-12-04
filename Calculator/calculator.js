@@ -113,8 +113,3 @@ export default class CalculatorClass extends Component {
         );
     }
 }
-
-/*resultText: {
-                    color: changeColor,
-                fontSize: 30,
-  },*/
