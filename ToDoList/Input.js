@@ -14,7 +14,7 @@ export default class InputClass extends Component {
                     <TouchableOpacity >
                         <Image
                             style={{ width: 55, height: 55, borderColor: 'black', borderWidth: 2, }}
-                            source={require('../src/plus.png')} />
+                            source={require('./src/plus.png')} />
                     </TouchableOpacity>
                 </View>
             </View>);

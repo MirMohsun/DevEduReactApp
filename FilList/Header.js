@@ -4,17 +4,15 @@ import { View, Text, StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   viewStyle: {
-    backgroundColor: '#30d0fe',
-    justifyContent: 'center',
-    paddingLeft: 22,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    elevation: 2,
-    position: 'relative'
+    backgroundColor: 'black',
+    justifyContent:'center',
+    shadowColor: 'gray',
+    shadowOffset: { width: 1, height: 3 },
+    shadowOpacity: 1,
   },
   textStyle: {
-    color: '#fff',
+    justifyContent:'center',
+    color: 'red',
     fontSize: 28,
     fontFamily: 'AvenirNext-DemiBold',
    paddingTop: 50

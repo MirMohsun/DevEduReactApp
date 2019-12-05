@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   sub: {
     shadowColor: '#000',
     borderRadius: 10,
-    backgroundColor: 'white',
+    backgroundColor: 'gray',
     shadowRadius: 8,
     shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.4
@@ -39,7 +39,7 @@ const ImageCard = ({ data }) => {
       <View style={sub}>
         <Image style={cover} source={{ uri: image }} />
       </View>
-      <Text style={h1}>{name.toUpperCase()}</Text>
+      <Text style={h1}>{name}</Text>
     </View>
   )
 }

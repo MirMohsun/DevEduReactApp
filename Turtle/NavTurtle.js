@@ -6,7 +6,6 @@ import { stylesForNav } from './StyleTurtle'
 import CalculatorClass from '../Calculator/calculator'
 import TodoList from '../ToDoList/TodoList'
 import List from '../FilList/List'
-import { TodoApp } from '../ToDoList/todoApp';
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -27,6 +26,10 @@ class HomeScreen extends Component {
         <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('FilmList')}>
           <Text style={[stylesForNav.btntxt]}>Working on it</Text>
         </TouchableOpacity>
+      </View>
+    );
+  }
+}
 const Turtle = createStackNavigator(
   {
     Home: HomeScreen,

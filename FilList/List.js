@@ -9,10 +9,10 @@ export default class List extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      title: "Welcome",
+      title: "Hi, you can search here some films",
       data: [],
       ssilka: '',
-
+      frist: [],
     }
   }
   componentDidMount() {
@@ -20,11 +20,14 @@ export default class List extends Component {
   }
 
   reguestUrl = async (URL) => {
+
     try {
-      const response = await fetch('https://gitlab.com/gHashTag/react-native-init-data/raw/master/db.json')
+      const response = await fetch(URL)
       const data =await response.json()
       console.log(data);
       this.setState({data})
+      const first = data[1]
+      console.log(first.show.image)
     } catch (e) {
       console.log("URL is wrong")
     }
