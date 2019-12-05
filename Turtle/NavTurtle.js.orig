@@ -4,9 +4,12 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import { stylesForNav } from './StyleTurtle'
 import CalculatorClass from '../Calculator/calculator'
-import TodoList from '../ToDoList/TodoList'
+<<<<<<< HEAD
 import List from '../FilList/List'
 import { TodoApp } from '../ToDoList/todoApp';
+=======
+import TodoList from '../ToDoList/TodoList'
+>>>>>>> ToDoList_with_redux
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -17,20 +20,38 @@ class HomeScreen extends Component {
   render() {
     return (
       <View style={stylesForNav.container}>
+<<<<<<< HEAD
+        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist', {
+          itemId: 86,
+          otherParam: 'anything you want here',
+        })}>
+          <Text style={[stylesForNav.btntxt]}>Working on it</Text>
+=======
         <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist')}>
           <Text style={[stylesForNav.btntxt]}>Go To ToDoList</Text>
-          <Text style={[stylesForNav.btntxt]}>Working on it</Text>
+>>>>>>> ToDoList_with_redux
         </TouchableOpacity>
         <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('Calculator')}>
           <Text style={[stylesForNav.btntxt]}>Go To Calculator</Text>
         </TouchableOpacity>
+<<<<<<< HEAD
         <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('FilmList')}>
           <Text style={[stylesForNav.btntxt]}>Working on it</Text>
         </TouchableOpacity>
+=======
+>>>>>>> ToDoList_with_redux
+      </View>
+    );
+  }
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> ToDoList_with_redux
 const Turtle = createStackNavigator(
   {
     Home: HomeScreen,
-    ToDolist: TodoList,
+    ToDolist: TodoApp,
     Calculator: CalculatorClass,
     FilmList: List
   },

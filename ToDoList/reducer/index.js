@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux'
-import todosReducer from './TodosReducer';
-import navReducer from './NavReducer';
+import somereducer from './reducer'
 
 
-const TurtleDB = combineReducers({
-  navReducer,
-  todosReducer
+const RootReducer = combineReducers({
+  somereducer
 })
 
-export default TurtleDB
+export default RootReducer
