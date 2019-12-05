@@ -1,35 +1,62 @@
 import React, { Component } from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
+import { View, ScrollView, StyleSheet, TextInput, TouchableOpacity, Text } from 'react-native';
 import Header from './Header'
 import ImageCard from './ImageCard'
 
-const url = 'https://gitlab.com/gHashTag/react-native-init-data/raw/master/db.json'
+let url = 'http://api.tvmaze.com/search/shows?q='
 
-
-    
-export default class App extends Component {
+export default class List extends Component {
   constructor(props) {
     super(props)
     this.state = {
       title: "Welcome",
       data: [],
+      ssilka: '',
+
+    }
+  }
+  componentDidMount() {
+    this.reguestUrl(url)
+  }
+
+  reguestUrl = async (URL) => {
+    try {
+      const response = await fetch('https://gitlab.com/gHashTag/react-native-init-data/raw/master/db.json')
+      const data =await response.json()
+      console.log(data);
+      this.setState({data})
+    } catch (e) {
+      console.log("URL is wrong")
     }
   }
 
-  componentDidMount = async () => {
-    try {
-        const response = await fetch(url)
-        const data = await response.json()
-        this.setState({ data })
-    } catch (e){
-     console.log("URL is wrong")
-    }
-    }
+  searchUpdated(term) {
+    this.setState({ searchTerm: term })
 
+  }
+
+  createurl = (searchTerm) => {
+    const ssilka = url + searchTerm;
+    this.setState({
+      ssilka
+    }
+    )
+    this.reguestUrl(ssilka)
+  }
   render() {
     const { title, data } = this.state
+
     return (
       <View>
+        <TouchableOpacity
+
+          onPress={() => this.createurl(this.state.searchTerm)}>
+          <Text style={{ fontSize: 30, color: 'black' }}>Search</Text>
+          <TextInput
+            style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+            onChangeText={(term) => { this.searchUpdated(term) }}
+          ></TextInput>
+        </TouchableOpacity>
         <Header title={title} />
         <ScrollView>
           <View style={styles.container}>
@@ -40,10 +67,12 @@ export default class App extends Component {
         </ScrollView>
       </View>
     )
+
   }
 }
 
-const styles=StyleSheet.create({
+
+const styles = StyleSheet.create({
   container: {
     marginTop: 30
   }

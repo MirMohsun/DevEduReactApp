@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import { stylesForTodo, stylesForNav } from './StyleTurtle'
 import CalculatorClass from '../Calculator/calculator'
-import List from '../FilList/List';
+import List from '../FilmList/List';
 import { TodoApp } from '../ToDoList/todoApp';
 
 class HomeScreen extends Component {
@@ -20,13 +20,13 @@ class HomeScreen extends Component {
           itemId: 86,
           otherParam: 'anything you want here',
         })}>
-          <Text style={[stylesForNav.btntxt]}>Go To Todo List</Text>
+          <Text style={[stylesForNav.btntxt]}>Working on it</Text>
         </TouchableOpacity>
         <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('Calculator')}>
           <Text style={[stylesForNav.btntxt]}>Go To Calculator</Text>
         </TouchableOpacity>
         <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('FilmList')}>
-          <Text style={[stylesForNav.btntxt]}>Sorry That part of project does not work correctly...</Text>
+          <Text style={[stylesForNav.btntxt]}>Working on it</Text>
         </TouchableOpacity>
       </View>
     );
