@@ -3,10 +3,10 @@ import App from './App';
 import {name as appName} from './app.json';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import TurtleDB from './ToDoList/reducer/'
+import RootReducer from './ToDoList/reducer/'
 import React  from 'react'
 
-const turtleStrore = createStore(TurtleDB)
+const turtleStrore = createStore(RootReducer)
 const Turtle = () =>     
 <Provider store={turtleStrore}><App/></Provider>;
 AppRegistry.registerComponent(appName, () => Turtle);
