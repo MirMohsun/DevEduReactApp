@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import { stylesForTodo, stylesForNav } from './StyleTurtle'
 import CalculatorClass from '../Calculator/calculator'
-import List from '../FilmList/List';
+import List from '../FilList/List'
 import { TodoApp } from '../ToDoList/todoApp';
 
 class HomeScreen extends Component {
