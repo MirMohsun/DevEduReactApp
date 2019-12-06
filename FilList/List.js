@@ -20,14 +20,15 @@ export default class List extends Component {
   }
 
   reguestUrl = async (URL) => {
-
     try {
       const response = await fetch(URL)
-      const data =await response.json()
+      const data = await response.json()
       console.log(data);
-      this.setState({data})
-      const first = data[1]
-      console.log(first.show)
+      this.setState({ data })
+      for (var x = 0; x < data.length; x++) {
+        console.log(data[x].show.image.medium)
+        console.log(data[x].show.name)
+      }
     } catch (e) {
       console.log("URL is wrong")
     }
