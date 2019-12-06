@@ -27,7 +27,7 @@ export default class List extends Component {
       console.log(data);
       this.setState({data})
       const first = data[1]
-      console.log(first.show.image)
+      console.log(first.show)
     } catch (e) {
       console.log("URL is wrong")
     }

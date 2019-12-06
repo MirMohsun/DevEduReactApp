@@ -16,12 +16,12 @@ class HomeScreen extends Component {
   render() {
     return (
       <View style={stylesForNav.container}>
+        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('Calculator')}>
+          <Text style={[stylesForNav.btntxt]}>Go To Calculator</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist')}>
           <Text style={[stylesForNav.btntxt]}>Go To ToDoList</Text>
           <Text style={[stylesForNav.btntxt]}>Technical work is in progress</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('Calculator')}>
-          <Text style={[stylesForNav.btntxt]}>Go To Calculator</Text>
         </TouchableOpacity>
         <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('FilmList')}>
           <Text style={[stylesForNav.btntxt]}>FilmList</Text>

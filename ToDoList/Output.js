@@ -6,7 +6,7 @@ export default class Output extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1,flexDirection: 'row', backgroundColor: 'red'}}>
+            <View style={{ flex: 1,flexDirection: 'row', backgroundColor: 'gray'}}>
                 <FlatList>
                     <ScrollView>
 
