@@ -11,12 +11,12 @@ class HomeScreen extends Component {
   static navigationOptions = {
     title: 'DevEducation',
     headerStyle: { backgroundColor: '#11473F' },
-    headerTitleStyle: { color: 'white' },
+    headerTitleStyle: { color: 'white', fontFamily: 'a-dark-wedding1' },
   };
   constructor() {
     super()
     this.state = {
-      customFont: ''
+      inDevelopment: '                                        (In development)'
     }
   }
 
@@ -37,8 +37,7 @@ class HomeScreen extends Component {
             <Text style={[stylesForNav.btntxt]}>FilmList</Text>
           </TouchableOpacity>
           <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist')}>
-            <Text style={[stylesForNav.btntxt]}>ToDoList</Text>
-            <Text style={[stylesForNav.btntxt]}>Technical work is in progress</Text>
+    <Text style={[stylesForNav.btntxt]}>ToDoList{this.state.inDevelopment}</Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -8,7 +8,7 @@ export default class List extends Component {
   static navigationOptions = {
     title: 'Film searcher',
     headerStyle: { backgroundColor: '#11473F' },
-    headerTitleStyle: { color: 'white' },
+    headerTitleStyle: { color: 'white', fontFamily: 'a-dark-wedding1' },
   };
   constructor(props) {
     super(props)

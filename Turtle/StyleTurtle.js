@@ -26,7 +26,6 @@ export const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     textAlign: 'center',
-    fontFamily: 'katana-shadow',
   },
 
 });
@@ -49,8 +48,10 @@ export const stylesForNav = StyleSheet.create({
     paddingHorizontal: 4
   },
   btntxt: {
+    marginTop: 5,
     fontSize: 25,
-    fontFamily: 'the-dark-ages',
+    textAlign: 'center',
+    fontFamily: 'parnas-deco',
     color: 'white',
   },
   headerStyle:{backgroundColor: 'red'},

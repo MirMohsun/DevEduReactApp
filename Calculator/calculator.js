@@ -6,7 +6,7 @@ export default class CalculatorClass extends Component {
     static navigationOptions = {
         title: 'Calculator',
         headerStyle: { backgroundColor: '#11473F' },
-        headerTitleStyle: { color: 'white' },
+        headerTitleStyle: { color: 'white', fontFamily: 'a-dark-wedding1' },
     };
     constructor() {
         super()
