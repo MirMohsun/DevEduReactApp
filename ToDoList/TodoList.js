@@ -6,8 +6,8 @@ import Output from './Output'
 export default class TodoList extends Component {
   static navigationOptions = {
     title: 'Your ToDo List',
-    headerStyle: { backgroundColor: 'gray' },
-    headerTitleStyle: { color: 'black' },
+    headerStyle: { backgroundColor: '#11473F' },
+    headerTitleStyle: { color: 'white' },
   };
 
   render() {

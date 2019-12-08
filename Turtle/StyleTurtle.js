@@ -17,16 +17,6 @@ export const styles = StyleSheet.create({
     height: 44,
   },
 
-  textInputStyle: {
-
-    textAlign: 'center',
-    height: 40,
-    width: '90%',
-    borderWidth: 1,
-    borderColor: '#4CAF50',
-    borderRadius: 7,
-    marginTop: 12
-  },
 
   button: {
 
@@ -50,25 +40,27 @@ export const stylesForNav = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'black',
+    backgroundColor: '#1D2020',
   },
   btnStl:{
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'gray',
+    backgroundColor: 'black',
     borderRadius: 5,
     borderWidth: 1,
-    borderColor: 'red',
+    borderColor: '#8A5992',
     marginBottom: 5,
-
+    paddingHorizontal: 4
   },
   btntxt: {
     fontSize: 25,
-    color: 'red',
+    fontFamily: 'lucida grande',
+    color: '#8A5992',
   },
   headerStyle:{backgroundColor: 'red'},
   headerTitleStyle:{color: 'black'},
 })
+
 export const stylesForTodo = StyleSheet.create({
   container2: {
     flex: 1,

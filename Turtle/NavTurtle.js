@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Button } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import React, { Component } from 'react'
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
@@ -10,23 +10,29 @@ import List from '../FilList/List'
 class HomeScreen extends Component {
   static navigationOptions = {
     title: 'DevEducation',
-    headerStyle: { backgroundColor: 'red' },
-    headerTitleStyle: { color: 'black' },
+    headerStyle: { backgroundColor: '#11473F' },
+    headerTitleStyle: { color: 'white' },
   };
   render() {
     return (
       <View style={stylesForNav.container}>
-        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('Calculator')}>
-          <Text style={[stylesForNav.btntxt]}>Go To Calculator</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist')}>
-          <Text style={[stylesForNav.btntxt]}>Go To ToDoList</Text>
-          <Text style={[stylesForNav.btntxt]}>Technical work is in progress</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('FilmList')}>
-          <Text style={[stylesForNav.btntxt]}>FilmList</Text>
-          <Text style={[stylesForNav.btntxt]}>Technical work is in progress</Text>
-        </TouchableOpacity>
+        <View style={{ backgroundColor: 'gray', borderRadius: 75, marginBottom : 20}}>
+          <Image
+            style={{ width: 250, height: 50 ,}}
+            source={require('./src/0.png')} />
+        </View>
+        <View style={{ alignContent: 'flex-start', width: 350, justifyContent: 'space-around' }}>
+          <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('Calculator')}>
+            <Text style={[stylesForNav.btntxt]}>Calculator</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('FilmList')}>
+            <Text style={[stylesForNav.btntxt]}>FilmList</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist')}>
+            <Text style={[stylesForNav.btntxt]}>ToDoList</Text>
+            <Text style={[stylesForNav.btntxt]}>Technical work is in progress</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }

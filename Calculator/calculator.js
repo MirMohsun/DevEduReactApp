@@ -5,8 +5,8 @@ import { styles } from './style';
 export default class CalculatorClass extends Component {
     static navigationOptions = {
         title: 'Calculator',
-        headerStyle: { backgroundColor: 'gray' },
-        headerTitleStyle: { color: 'black' },
+        headerStyle: { backgroundColor: '#11473F' },
+        headerTitleStyle: { color: 'white' },
     };
     constructor() {
         super()

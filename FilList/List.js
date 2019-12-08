@@ -1,71 +1,80 @@
 import React, { Component } from 'react';
-import { View, ScrollView, StyleSheet, TextInput, TouchableOpacity, Text } from 'react-native';
-import Header from './Header'
+import { View, ScrollView, StyleSheet, TextInput, TouchableOpacity, Image, Text } from 'react-native';
 import ImageCard from './ImageCard'
 
 let url = 'http://api.tvmaze.com/search/shows?q='
 
 export default class List extends Component {
+  static navigationOptions = {
+    title: 'Film searcher',
+    headerStyle: { backgroundColor: '#11473F' },
+    headerTitleStyle: { color: 'white' },
+  };
   constructor(props) {
     super(props)
     this.state = {
-      title: "Hi, you can search here some films",
       data: [],
       ssilka: '',
-      frist: [],
     }
   }
   componentDidMount() {
     this.reguestUrl(url)
   }
 
+
   reguestUrl = async (URL) => {
     try {
       const response = await fetch(URL)
       const data = await response.json()
-      console.log(data);
+      console.log(URL);
+
       this.setState({ data })
-      for (var x = 0; x < data.length; x++) {
-        console.log(data[x].show.image.medium)
-        console.log(data[x].show.name)
-      }
     } catch (e) {
       console.log("URL is wrong")
     }
   }
-
   searchUpdated(term) {
     this.setState({ searchTerm: term })
-
   }
 
   createurl = (searchTerm) => {
     const ssilka = url + searchTerm;
-    this.setState({
-      ssilka
-    }
-    )
+    console.log('serch' + searchTerm);
+    this.setState({ ssilka })
     this.reguestUrl(ssilka)
   }
   render() {
-    const { title, data } = this.state
-
+    const { data } = this.state
     return (
-      <View>
-        <TouchableOpacity
-
-          onPress={() => this.createurl(this.state.searchTerm)}>
-          <Text style={{ fontSize: 30, color: 'black' }}>Search</Text>
+      <View style={{flex: 1, backgroundColor: '#070839'}}>
+        <ScrollView>
+        <View>
+          <Text style={styles.textStyle}>Hi, you can search here some films</Text>
+        </View>
+        <View style={{ flexDirection: 'row' }}>
           <TextInput
-            style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+            style={styles.TIstyle}
+            placeholder='Search'
+            placeholderTextColor='#8A5992'
             onChangeText={(term) => { this.searchUpdated(term) }}
           ></TextInput>
-        </TouchableOpacity>
-        <Header title={title} />
-        <ScrollView>
-          <View style={styles.container}>
+          <View style={{
+            flex: 1, 
+            backgroundColor: '#070839', 
+            alignContent: 'center',
+            borderColor: '#8A5992',
+            borderTopWidth: 1,
+          }}>
+            <TouchableOpacity onPress={() => this.createurl(this.state.searchTerm)} >
+              <Image
+                style={{ width: 55, height: 55 }}
+                source={require('./src/search--v2.png')} />
+            </TouchableOpacity>
+          </View>
+        </View>
+          <View style={styles.maincontainer}>
             {data.map(item => (
-              <ImageCard data={item} key={item.id} />
+              <ImageCard data={item} key={item} />
             ))}
           </View>
         </ScrollView>
@@ -77,7 +86,54 @@ export default class List extends Component {
 
 
 const styles = StyleSheet.create({
+  maincontainer: {
+    backgroundColor: '#070839',
+    flex: 1,
+  },
+  textStyle: {
+    justifyContent: 'center',
+    color: '#8A5992',
+    fontSize: 28,
+    backgroundColor: '#070839',
+  },
+  viewStyle: {
+    backgroundColor: '#070839',
+    justifyContent: 'center',
+    shadowColor: 'gray',
+    shadowOffset: { width: 1, height: 3 },
+    shadowOpacity: 1,
+  },
   container: {
-    marginTop: 30
-  }
+    alignContent: 'center',
+    flexDirection: 'row',
+    paddingBottom: 10,
+
+  },
+  sub: {
+    borderRadius: 10,
+    backgroundColor: 'gray',
+    shadowOpacity: 0.4,
+  },
+  h1: {
+    paddingTop: 10,
+    fontFamily: 'AvenirNext-DemiBold',
+    fontSize: 18,
+    alignSelf: 'center',
+    textAlign: 'center',
+    color: 'gray'
+  },
+  cover: {
+    borderRadius: 10
+  },
+  TIstyle: {
+    flex: 7,
+    height: 40,
+    borderColor: '#8A5992',
+    borderTopWidth: 1,
+    height: 56,
+    backgroundColor: '#070839',
+    fontSize: 28,
+    color: '#8A5992'
+  },
+
 })
