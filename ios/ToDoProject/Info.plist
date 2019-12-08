@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -53,5 +53,36 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>a-dark-wedding1.ttf</string>
+		<string>advergothiccamc.ttf</string>
+		<string>atomic-sushi.ttf</string>
+		<string>baltimore-nouveau.ttf</string>
+		<string>bushido.ttf</string>
+		<string>catharsis-bedouin.ttf</string>
+		<string>dark-crystal-outline.ttf</string>
+		<string>dark-horse-italic.ttf</string>
+		<string>dark-horse-shadow.ttf</string>
+		<string>dark-side-brk.ttf</string>
+		<string>dewberry-bold.ttf</string>
+		<string>japperneese.ttf</string>
+		<string>katana-shadow.ttf</string>
+		<string>khmer.ttf</string>
+		<string>madelikesslab.ttf</string>
+		<string>ming-gothic.ttf</string>
+		<string>new-record.ttf</string>
+		<string>ninjaline.ttf</string>
+		<string>orchidee-light.ttf</string>
+		<string>orchidee-medium.ttf</string>
+		<string>parnas-deco.ttf</string>
+		<string>public-utility-jeepney.ttf</string>
+		<string>quasi.ttf</string>
+		<string>rostov.ttf</string>
+		<string>samuraicabco-bb.ttf</string>
+		<string>the-dark-ages.ttf</string>
+		<string>theater-afisha.ttf</string>
+		<string>ultra-9112.ttf</string>
+	</array>
 </dict>
 </plist>

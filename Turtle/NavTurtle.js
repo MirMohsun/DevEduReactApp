@@ -13,12 +13,20 @@ class HomeScreen extends Component {
     headerStyle: { backgroundColor: '#11473F' },
     headerTitleStyle: { color: 'white' },
   };
+  constructor() {
+    super()
+    this.state = {
+      customFont: ''
+    }
+  }
+
+
   render() {
     return (
       <View style={stylesForNav.container}>
-        <View style={{ backgroundColor: 'gray', borderRadius: 75, marginBottom : 20}}>
+        <View style={{ backgroundColor: '#568795', borderRadius: 75, marginBottom: 20 }}>
           <Image
-            style={{ width: 250, height: 50 ,}}
+            style={{ width: 250, height: 50, }}
             source={require('./src/0.png')} />
         </View>
         <View style={{ alignContent: 'flex-start', width: 350, justifyContent: 'space-around' }}>

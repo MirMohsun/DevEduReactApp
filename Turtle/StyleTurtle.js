@@ -10,16 +10,12 @@ export const styles = StyleSheet.create({
     margin: 2
 
   },
-
   item: {
     padding: 10,
     fontSize: 18,
     height: 44,
   },
-
-
   button: {
-
     width: '90%',
     height: 40,
     padding: 10,
@@ -27,10 +23,10 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
     marginTop: 10
   },
-
   buttonText: {
     color: '#fff',
     textAlign: 'center',
+    fontFamily: 'katana-shadow',
   },
 
 });
@@ -48,14 +44,14 @@ export const stylesForNav = StyleSheet.create({
     backgroundColor: 'black',
     borderRadius: 5,
     borderWidth: 1,
-    borderColor: '#8A5992',
+    borderColor: 'white',
     marginBottom: 5,
     paddingHorizontal: 4
   },
   btntxt: {
     fontSize: 25,
-    fontFamily: 'lucida grande',
-    color: '#8A5992',
+    fontFamily: 'the-dark-ages',
+    color: 'white',
   },
   headerStyle:{backgroundColor: 'red'},
   headerTitleStyle:{color: 'black'},
