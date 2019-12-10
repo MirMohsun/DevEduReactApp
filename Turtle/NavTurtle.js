@@ -10,7 +10,7 @@ import List from '../FilList/List'
 class HomeScreen extends Component {
   static navigationOptions = {
     title: 'DevEducation',
-    headerStyle: { backgroundColor: '#11473F' },
+    headerStyle: { backgroundColor: '#1D2020' },
     headerTitleStyle: { color: 'white', fontFamily: 'a-dark-wedding1' },
   };
   constructor() {
@@ -37,7 +37,7 @@ class HomeScreen extends Component {
             <Text style={[stylesForNav.btntxt]}>FilmList</Text>
           </TouchableOpacity>
           <TouchableOpacity style={stylesForNav.btnStl} onPress={() => this.props.navigation.navigate('ToDolist')}>
-    <Text style={[stylesForNav.btntxt]}>ToDoList{this.state.inDevelopment}</Text>
+            <Text style={[stylesForNav.btntxt]}>ToDoList{this.state.inDevelopment}</Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -16,14 +16,14 @@ export const styles = StyleSheet.create({
   number: {
     flex: 2,
     justifyContent: 'center',
-    backgroundColor: '#D5D8DC',
+    backgroundColor: '#76C4B0',
     justifyContent: 'center',
     alignItems: 'flex-end',
   },
   result: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#D5D8DC',
+    backgroundColor: '#76C4B0',
     alignItems: 'flex-end',
   },
   btnstl: {
@@ -35,6 +35,7 @@ export const styles = StyleSheet.create({
   },
   btntxt: {
     fontSize: 40,
+    color: '#C86CC3',
   },
   buttons: {
     flex: 7,
@@ -44,19 +45,19 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
     alignItems: 'stretch',
-    backgroundColor: '#000000'
+    backgroundColor: '#26242A'
   },
   numbers: {
     flex: 3,
-    color: '#FDFEFE',
-    backgroundColor: '#F39C12',
+    color: 'pink',
+    backgroundColor: '#26242A',
   },
   numberText: {
     fontSize: 40,
     color: 'black',
   },
   optxt:{
-    color: 'red',
+    color: '#798B3C',
     fontSize: 35
   }
 })

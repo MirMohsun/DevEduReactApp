@@ -26,8 +26,6 @@ export default class List extends Component {
     try {
       const response = await fetch(URL)
       const data = await response.json()
-      console.log(URL);
-
       this.setState({ data })
     } catch (e) {
       console.log("URL is wrong")
@@ -39,7 +37,6 @@ export default class List extends Component {
 
   createurl = (searchTerm) => {
     const ssilka = url + searchTerm;
-    console.log('serch' + searchTerm);
     this.setState({ ssilka })
     this.reguestUrl(ssilka)
   }
@@ -95,6 +92,7 @@ const styles = StyleSheet.create({
     color: '#8A5992',
     fontSize: 28,
     backgroundColor: '#070839',
+    fontFamily: 'theater-afisha'
   },
   viewStyle: {
     backgroundColor: '#070839',
@@ -133,7 +131,8 @@ const styles = StyleSheet.create({
     height: 56,
     backgroundColor: '#070839',
     fontSize: 28,
-    color: '#8A5992'
+    color: '#8A5992',
+    fontFamily: 'theater-afisha'
   },
 
 })
