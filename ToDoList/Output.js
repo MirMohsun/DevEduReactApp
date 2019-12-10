@@ -1,7 +1,7 @@
 import { View, FlatList } from 'react-native';
 import React, { Component } from 'react'
 import { ScrollView } from 'react-native-gesture-handler';
-
+//А теперь подумай как тут может быть редакс ¯\_(ツ)_/¯
 export default class Output extends Component {
 
     render() {

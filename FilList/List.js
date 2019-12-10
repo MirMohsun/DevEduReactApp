@@ -14,7 +14,7 @@ export default class List extends Component {
     super(props)
     this.state = {
       data: [],
-      ssilka: '',
+      link: '',
     }
   }
   componentDidMount() {
@@ -31,14 +31,14 @@ export default class List extends Component {
       console.log("URL is wrong")
     }
   }
-  searchUpdated(term) {
-    this.setState({ searchTerm: term })
+  searchUpdated(answer) {
+    this.setState({ searchText: answer })
   }
 
-  createurl = (searchTerm) => {
-    const ssilka = url + searchTerm;
-    this.setState({ ssilka })
-    this.reguestUrl(ssilka)
+  createurl = (searchText) => {
+    const link = url + searchText;
+    this.setState({link})
+    this.reguestUrl(link)
   }
   render() {
     const { data } = this.state
@@ -53,7 +53,7 @@ export default class List extends Component {
             style={styles.TIstyle}
             placeholder='Search'
             placeholderTextColor='#8A5992'
-            onChangeText={(term) => { this.searchUpdated(term) }}
+            onChangeText={(answer) => { this.searchUpdated(answer) }}
           ></TextInput>
           <View style={{
             flex: 1, 
@@ -62,7 +62,7 @@ export default class List extends Component {
             borderColor: '#8A5992',
             borderTopWidth: 1,
           }}>
-            <TouchableOpacity onPress={() => this.createurl(this.state.searchTerm)} >
+            <TouchableOpacity onPress={() => this.createurl(this.state.searchText)} >
               <Image
                 style={{ width: 55, height: 55 }}
                 source={require('./src/search--v2.png')} />
