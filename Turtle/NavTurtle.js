@@ -113,7 +113,6 @@ const bottomTab = createBottomTabNavigator(
     }
   }
 )
-
 const someNav = createStackNavigator(
   {
     Home: HomeScreen,
@@ -125,7 +124,5 @@ const someNav = createStackNavigator(
       headerVisible: false,
     }
   }
-
 )
-
 export const SomeContainer = createAppContainer(someNav)
