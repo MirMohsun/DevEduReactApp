@@ -52,9 +52,6 @@ export default class Panresponers extends Component {
     render() {
         return (
             <View >
-                <View style={[styles.child, { marginLeft: this.state.marginLeft }]}
-                    {...this._panResponder.panHandlers} />
-                <Text style={{ fontSize: 40 }}>Swiper</Text>
                 <View style={[{ backgroundColor: 'gray', borderRadius: 75, marginBottom: 20, }, {marginLeft: this.state.marginLeft}]} {...this._panResponder.panHandlers}>
                     <Image
                         style={{ width: 250, height: 50, justifyContent: 'center',alignContent: 'center' }}

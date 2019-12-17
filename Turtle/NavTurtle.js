@@ -54,7 +54,7 @@ const IHome = createStackNavigator(
   {
     headerMode: 'none',
     navigationOptions: {
-      headerVisible: false,
+      headerVisible: true,
     }
   },
   {
@@ -73,8 +73,9 @@ const IFilmList = createStackNavigator(
   },
   {
     initialRouteName: 'FilmList',
+    headerMode: 'none',
     navigationOptions: {
-      tabBarVisible: true
+      headerVisible: true,
     }
   },
 );
@@ -87,16 +88,27 @@ const ICalculator = createStackNavigator(
   },
   {
     initialRouteName: 'Calculator',
+    headerMode: 'none',
+    navigationOptions: {
+      headerVisible: true,
+    }
   },
 );
 
 const bottomTab = createBottomTabNavigator(
   {
-    Home: IHome,
+    Home:IHome,
     Calculator: ICalculator,
     FilmList: IFilmList,
   },
   {
+    headerMode: 'none',
+    navigationOptions: {
+      headerVisible: false,
+    },
+    tabStyle: {
+      borderRadius: 100,
+    },
     tabBarOptions: {
       inactiveTintColor: 'white',
       activeTintColor: '#78568D',
@@ -123,9 +135,8 @@ const someNav = createStackNavigator(
     headerMode: 'none',
     navigationOptions: {
       headerVisible: false,
-    }
+    },
   }
-
 )
 
 export const SomeContainer = createAppContainer(someNav)
