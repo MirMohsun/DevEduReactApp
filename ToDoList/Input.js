@@ -6,13 +6,13 @@ export default class InputClass extends Component {
         super (props)
         this.state ={
             todos: [],
-            todo
+            
         }
     }
-    createToDo (answer) {
-        this.setState ({todo: answer})
+    createToDo () {
+        this.setState ({})
     }
-    addToDo(todo){
+    addToDo(){
         //тут я должен записать свой текст в следующую часть ¯\_(ツ)_/¯
     }
 
@@ -27,7 +27,7 @@ export default class InputClass extends Component {
                 >
                 </TextInput>
                 <View style={{ flex: 0.8, backgroundColor: 'gray' }}>
-                    <TouchableOpacity onPress={() => this.addToDo(this.state.todo)}>
+                    <TouchableOpacity onPress={() => this.addToDo()}>
                         <Image
                             style={{ width: 55, height: 55, borderColor: 'black', borderWidth: 2, }}
                             source={require('./src/plus.png')} />

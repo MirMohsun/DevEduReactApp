@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux'
-import somereducer from './reducer'
+import todos from './todos'
+import visibility from './visibility'
 
 
 const RootReducer = combineReducers({
-  somereducer
+  todos,
+  visibility
 })
 
 export default RootReducer

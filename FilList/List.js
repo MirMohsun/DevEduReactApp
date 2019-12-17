@@ -6,6 +6,7 @@ let url = 'http://api.tvmaze.com/search/shows?q='
 
 export default class List extends Component {
   static navigationOptions = {
+    
     title: 'Film searcher',
     headerStyle: { backgroundColor: '#11473F' },
     headerTitleStyle: { color: 'white', fontFamily: 'a-dark-wedding1' },

@@ -2,10 +2,12 @@ import { View, Text, TouchableOpacity, Image } from 'react-native';
 import React, { Component } from 'react'
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { stylesForNav } from './StyleTurtle'
 import CalculatorClass from '../Calculator/calculator'
 import TodoList from '../ToDoList/TodoList'
 import List from '../FilList/List'
+
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -19,8 +21,6 @@ class HomeScreen extends Component {
       inDevelopment: '                                        (In development)'
     }
   }
-
-
   render() {
     return (
       <View style={stylesForNav.container}>
@@ -44,7 +44,7 @@ class HomeScreen extends Component {
     );
   }
 }
-const Turtle = createStackNavigator(
+const IHome = createStackNavigator(
   {
     Home: HomeScreen,
     ToDolist: TodoList,
@@ -52,7 +52,80 @@ const Turtle = createStackNavigator(
     FilmList: List
   },
   {
+    headerMode: 'none',
+    navigationOptions: {
+      headerVisible: false,
+    }
+  },
+  {
+    bottomTabs: {
+      drawBehind: true,
+    },
     initialRouteName: 'Home',
   },
+)
+const IFilmList = createStackNavigator(
+  {
+    Home: HomeScreen,
+    ToDolist: TodoList,
+    Calculator: CalculatorClass,
+    FilmList: List
+  },
+  {
+    initialRouteName: 'FilmList',
+    navigationOptions: {
+      tabBarVisible: true
+    }
+  },
 );
-export const SomeContainer = createAppContainer(Turtle);
+const ICalculator = createStackNavigator(
+  {
+    Home: HomeScreen,
+    ToDolist: TodoList,
+    Calculator: CalculatorClass,
+    FilmList: List,
+  },
+  {
+    initialRouteName: 'Calculator',
+  },
+);
+
+const bottomTab = createBottomTabNavigator(
+  {
+    Home: IHome,
+    Calculator: ICalculator,
+    FilmList: IFilmList,
+  },
+  {
+    tabBarOptions: {
+      inactiveTintColor: 'white',
+      activeTintColor: '#78568D',
+      labelStyle: {
+        fontSize: 30,
+        fontFamily: 'parnas-deco'
+      },
+      tabStyle: {
+        width: 150,
+      },
+      style: {
+        backgroundColor: '#1D2020',
+      },
+    }
+  }
+)
+
+const someNav = createStackNavigator(
+  {
+    Home: HomeScreen,
+    bottomTab: bottomTab
+  },
+  {
+    headerMode: 'none',
+    navigationOptions: {
+      headerVisible: false,
+    }
+  }
+
+)
+
+export const SomeContainer = createAppContainer(someNav)
